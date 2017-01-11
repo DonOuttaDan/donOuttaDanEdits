@@ -281,7 +281,7 @@ function updateBehaviour (player, tag, replace, content, opp) {
 
 	    }
 	    else if (typeof hasHand !== typeof undefined && hasHand !== false) {
-		if (handStrengthToString(hands[player]) === hasHand) {
+		if (handStrengthToString(hands[player].strength) === hasHand) {
 			console.log("Best match is hasHand!");
                         bestMatch = states[i];
                         break;
