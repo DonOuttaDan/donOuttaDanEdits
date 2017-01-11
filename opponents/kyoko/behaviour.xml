@@ -228,6 +228,11 @@
             <case tag="must_strip_winning">
                 <state img="0-loss.png">Only a matter of time, I suppose.</state>
             </case>
+            <case tag="must_strip_winning" hasHand="High Card">
+                <state img="0-loss.png">I expected as much, having only a high card and nothing else...</state>
+            </case>
+            <case tag="must_strip_winning" hasHand="One Pair">
+                <state img="0-loss.png">Perhaps I should not have been so confident about a single pair.</state>
         </stage>
 
         <stage id="1">
