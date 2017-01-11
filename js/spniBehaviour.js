@@ -249,13 +249,23 @@ function updateBehaviour (player, tag, replace, content, opp) {
             var filter = states[i].attr("filter");
 	    var alsoPlaying = states[i].attr("alsoPlaying");
 	    var hasHand = states[i].attr("hasHand");
+	    var targetStage = states[i].attr("targetStage");
             
             if (opp !== null && typeof target !== typeof undefined && target !== false) {
                 target = "opponents/" + target  + "/";
                 if (target === opp.folder) {
-                    console.log("Best match is target!");
-                    bestMatch = states[i];
-                    break;
+		    if (typeof targetStage !== typeof undefined && targetStage !== false) {
+		        if (targetStage === opp.stage) {
+			    console.log("Best match is targetStage!");
+                            bestMatch = states[i];
+                            break;
+		        }
+		    }
+                    else {
+                        console.log("Best match is target!");
+                        bestMatch = states[i];
+                        break;
+		    }
                 }
             }
             else if (opp !== null && typeof filter !== typeof undefined && filter !== false) {
