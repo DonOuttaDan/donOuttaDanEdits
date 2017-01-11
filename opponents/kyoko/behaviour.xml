@@ -204,11 +204,23 @@
             <case tag="must_strip_normal">
                 <state img="0-loss.png">That's unfortunate.</state>
             </case>
+            <case tag="must_strip_normal" hasHand="High Card">
+                <state img="0-loss.png">I expected as much, having only a high card and nothing else...</state>
+            </case>
+            <case tag="must_strip_normal" hasHand="One Pair">
+                <state img="0-loss.png">Perhaps I should not have been so confident about a single pair.</state>
+            </case>
             <case tag="must_strip_losing">
                 <state img="0-loss.png">That's unfortunate.</state>
             </case>
+            <case tag="must_strip_losing" hasHand="High Card">
+                <state img="0-loss.png">I expected as much, having only a high card and nothing else...</state>
+            </case>
+            <case tag="must_strip_losing" hasHand="One Pair">
+                <state img="0-loss.png">Perhaps I should not have been so confident about a single pair.</state>
+            </case>
             <case tag="stripping">
-                <state img="0-strip.png">Oh well. It was getting hot in here anyway.</state>
+                <state img="0-strip.png">Oh well. It was getting hot in here regardless.</state>
             </case>
 	    <case tag="stripping" alsoPlaying="streaming-chan">
 		<state img="0-strip.png">Is this really being streamed to so many people? That brings back... bad memories.</state>

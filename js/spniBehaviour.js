@@ -248,6 +248,7 @@ function updateBehaviour (player, tag, replace, content, opp) {
             var target = states[i].attr("target");
             var filter = states[i].attr("filter");
 	    var alsoPlaying = states[i].attr("alsoPlaying");
+	    var hasHand = states[i].attr("hasHand");
             
             if (opp !== null && typeof target !== typeof undefined && target !== false) {
                 target = "opponents/" + target  + "/";
@@ -277,6 +278,14 @@ function updateBehaviour (player, tag, replace, content, opp) {
 		    }
 
 		}
+
+	    }
+	    else if (typeof hasHand !== typeof undefined && hasHand !== false) {
+		if (handStrengthToString(hands[player]) === hasHand) {
+			console.log("Best match is hasHand!");
+                        bestMatch = states[i];
+                        break;
+                }
 
 	    }
             else if (bestMatch === null) {
