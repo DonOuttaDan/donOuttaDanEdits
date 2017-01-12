@@ -313,13 +313,14 @@ function updateBehaviour (player, tag, replace, content, opp) {
 
 	    }
             else if (opp !== null && typeof oppHand !== typeof undefined && oppHand !== false) {
-                for (var q = 0; q < players.length; q++)
+                for (var q = 0; q < players.length; q++) {
                 if (opp === players[q]) {
                     if (handStrengthToString(hands[q].strength) === oppHand) {
                         console.log("Best match is oppHand!");
                         bestMatch = states[i];
                         break;
                     }
+                }
                 }
             }
             else if (bestMatch === null) {
