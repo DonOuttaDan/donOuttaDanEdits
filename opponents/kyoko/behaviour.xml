@@ -39,6 +39,21 @@
                 <state img="0-calm.png">Looks like ~name~ lost the hand.</state>
                 <state img="0-smug.png">~name~, it's your turn.</state>
             </case>
+            <case tag="female_must_strip" oppHand="Two Pair">
+                <state img="0-calm.png">Lost with two pairs? That's unfortunate.</state>
+            </case>
+            <case tag="female_must_strip" oppHand="Three of a Kind">
+                <state img="0-calm.png">Lost with three of a kind? That's unfortunate.</state>
+            </case>
+            <case tag="female_must_strip" oppHand="Straight">
+                <state img="0-surprised.png">You lost with a really good hand!</state>
+            </case>
+            <case tag="female_must_strip" oppHand="Flush">
+                <state img="0-surprised.png">You lost with a really good hand!</state>
+            </case>
+            <case tag="female_must_strip" oppHand="Full House">
+                <state img="0-surprised.png">You lost with a really good hand!</state>
+            </case>
             <case tag="male_chest_will_be_visible">
                 <state img="0-smug.png">Hmm...</state>
             </case>
@@ -119,6 +134,21 @@
                 <state img="0-calm.png">It seems ~name~ lost the round.</state>
                 <state img="0-calm.png">Looks like ~name~ lost the hand.</state>
                 <state img="0-smug.png">~name~, it's your turn.</state>
+            </case>
+            <case tag="male_must_strip" oppHand="Two Pair">
+                <state img="0-calm.png">Lost with two pairs? That's unfortunate.</state>
+            </case>
+            <case tag="male_must_strip" oppHand="Three of a Kind">
+                <state img="0-calm.png">Lost with three of a kind? That's unfortunate.</state>
+            </case>
+            <case tag="male_must_strip" oppHand="Straight">
+                <state img="0-surprised.png">You lost with a really good hand!</state>
+            </case>
+            <case tag="male_must_strip" oppHand="Flush">
+                <state img="0-surprised.png">You lost with a really good hand!</state>
+            </case>
+            <case tag="male_must_strip" oppHand="Full House">
+                <state img="0-surprised.png">You lost with a really good hand!</state>
             </case>
             <case tag="female_must_masturbate">
                 <state img="0-worried.png">Hmm...</state>
