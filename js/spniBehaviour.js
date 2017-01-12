@@ -245,26 +245,27 @@ function updateBehaviour (player, tag, replace, content, opp) {
         // look for the best match
         var bestMatch = null;
         for (var i = 0; i < states.length; i++) {
-            var target = states[i].attr("target");
-            var filter = states[i].attr("filter");
-	    var alsoPlaying = states[i].attr("alsoPlaying");
-	    var hasHand = states[i].attr("hasHand");
-	    var targetStage = states[i].attr("targetStage");
+            var target =           states[i].attr("target");
+            var filter =           states[i].attr("filter");
+	    var alsoPlaying =      states[i].attr("alsoPlaying");
+	    var hasHand =          states[i].attr("hasHand");
+            var targetStage =      states[i].attr("targetStage");
+            var alsoPlayingStage = states[i].attr("alsoPlayingStage");
             
             if (opp !== null && typeof target !== typeof undefined && target !== false) {
                 target = "opponents/" + target  + "/";
                 if (target === opp.folder) {
-		    if (typeof targetStage !== typeof undefined && targetStage !== false) {
-		        if (targetStage === opp.stage) {
-			    console.log("Best match is targetStage!");
+		        if (typeof targetStage !== typeof undefined && targetStage !== false) {
+		            if (targetStage === opp.stage + '') {
+			        console.log("Best match is targetStage!");
+                                bestMatch = states[i];
+                                break;
+		            }
+		        }
+                        else {
+                            console.log("Best match is target!");
                             bestMatch = states[i];
                             break;
-		        }
-		    }
-                    else {
-                        console.log("Best match is target!");
-                        bestMatch = states[i];
-                        break;
 		    }
                 }
             }
@@ -281,9 +282,21 @@ function updateBehaviour (player, tag, replace, content, opp) {
 	    	for (var j = 0; j < players.length; j++) {
 		    if (opp !== players[j]) {
 		    	if ("opponents/" + alsoPlaying + "/" === players[j].folder) {
+
+                            if (typeof alsoPlayingStage !== typeof undefined && alsoPlayingStage !== false) {
+                                if (alsoPlayingStage === players[j].stage + '')
+                                {
+                                    console.log("Best match is alsoPlayingStage!");
+                                    bestMatch = states[i];
+                                    break;
+                                }
+
+                            }
+                            else{
 				console.log("Best match is alsoPlaying!");
 				bestMatch = states[i];
 				break;
+                            }
 		    	}
 		    }
 

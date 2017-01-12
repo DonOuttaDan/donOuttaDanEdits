@@ -757,7 +757,7 @@
                 <state img="2-neutral.png">Everyone having a good time?</state>
             </case>
             <case tag="stripped">
-                <state img="2-stripped.png">High quality socks. They were sent by a fan!... I had to clean it of some weird stains first.</state>
+                <state img="2-stripped.png">High quality socks. They were sent by a fan!... I <i>did</i> have to wipe off some weird stains first, but whatever.</state>
             </case>
             <case tag="must_strip_normal">
                 <state img="2-loss.png">No waaaay! I lost the rooouuund?</state>
@@ -1746,6 +1746,15 @@
             </case>
             <case tag="stripped">
                 <state img="6-stripped.png">Here you go! Your friendly neighborhood stream-y titties!</state>
+            </case>
+            <case tag="stripped" alsoPlaying="nugi-chan" alsoPlayingStage=7>
+                <state img="6-stripped.png">Here you go!... And with no band-aids, unlike <i>some</i> people!</state>
+            </case>
+            <case tag="stripped" alsoPlaying="nugi-chan" alsoPlayingStage=8>
+                <state img="6-stripped.png">Here you go!... And with no band-aids, unlike the girl fingering herself over there!</state>
+            </case>
+            <case tag="stripped" alsoPlaying="nugi-chan" alsoPlayingStage=9>
+                <state img="6-stripped.png">Here you go!... And with no band-aids, unlike <i>some</i> people!</state>
             </case>
             <case tag="must_strip_normal">
                 <state img="6-loss.png">Oh no, the humanity! I have to get naked?</state>
