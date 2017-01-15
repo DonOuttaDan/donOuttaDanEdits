@@ -281,7 +281,7 @@ function updateBehaviour (player, tag, replace, content, opp) {
 			// filter (priority = 150)
 			if (opp !== null && typeof filter !== typeof undefined && filter !== false) {
 				// check against tags
-				boolean found = false;
+				var found = false;
                 for (var j = 0; j < opp.tags.length && found === false; j++) {
                     if (filter === opp.tags[j]) {
 						totalPriority += 150;	// priority
@@ -331,7 +331,7 @@ function updateBehaviour (player, tag, replace, content, opp) {
             // alsoPlaying, alsoPlayingStage, alsoPlayingHand (priority = 100, 40, 5)
 			if (typeof alsoPlaying !== typeof undefined && alsoPlaying !== false) {
 			
-				boolean foundEm = false;
+				var foundEm = false;
 				var j = 0;
 				for (j = 0; j < players.length && foundEm === false; j++) {
 					if (opp !== players[j]) {
